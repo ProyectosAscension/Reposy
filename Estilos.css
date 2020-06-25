@@ -1,0 +1,96 @@
+/*
+1.-Primero se definen los estilos para ETIQUETAS html, por eemplo: header, footer, div, a, p etc.
+2.-Despues se definen los estilos para IDENTIICADORES (id), los id´s son elementos unicos en el html, en el css 
+se declaran con el  simbolo de #
+ejemplo: #nombre-id(estilos) y en el html se llaman mediante el atributo id
+ejemplo  <div ide = "publicidad"> <div>
+3.- al Final se definen los estilos para las CLASES(class), las clases son elementos que se pueden repetir 'n' 
+veces en el html, en el css se declaran con el simbolo de . ejemplo: .nombre-clase{esilos} y em html se llaman
+ mediante el atributo class, ejemplo <div clas="borde-logod">  <div>
+4.- todos los estilos se ordenan conforme van apareciendo en la disposicion de html, teniendo en cuenta la 
+prioridad anterior, es decir, primero etiquetas html luego id´s y al final clases.
+5.- los atributos se declaran de la siguiente manera: {atributos1:valor1;atributo2:valor2;...;atributoN:valorN:}
+6.- todos los atributos se ordenan alfabeticamente, por ejemplo si tengo width, color, display, entonces el 
+orden seria: primero color, luego display y al inal width.
+7.- si tenemos estilos para el comodin *, o para las etiquets html y/o body, estos estilos son los primeros 
+en definirse.
+8.- en el body debemos declarar un tamaño de funte global.
+9.- si tenemos estilos para resetear elementos html, estos iran antes de cualquier estilo.
+*{
+    margin:0;
+    padding:0;
+}
+
+<
+>
+
+
+
+
+investigar el em en diseño web
+
+
+    gestor de contenido: 
+    drupa, worpress, ivnestigar, diferencia entre gestores de contendo yonla, grupal
+    */
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    /* 16px=12pt=100 =1em*/
+    body
+    {
+        background: #212121;
+        color: #FFF;
+        font-family: "soberana", Arial;
+        /* Responsive desing*/
+    }
+    h1
+    {
+        color: #F60;
+        margin: 0.25em auto;
+        text-align: center;
+        /*sombra*/
+        text-shadow: 5px 5px 10px rgba(255, 255, 255, 0.9);
+    }
+    header, nav, footer
+    {
+        background: #1E6381;
+        border-radius: 0.5em;
+        margin: 0.5em auto;
+        max-width: 960px;
+        padding: 0.25em;
+        text-align: center;
+    }
+    section#contenedor
+    {
+        /*background:#FFF;*/
+        margin: 0.5em auto;
+        max-width: 960px;
+        padding: 0em;
+        text-align: center;
+    }
+    section#principal, aside
+    {
+        background: #1E6381;
+        border-radius: 0.5em;
+        display: inline-block;
+        margin: 0.25 auto;
+        max-width: 960px;
+        min-height: 200px;
+        padding: 0.25em;
+        text-align: center;
+        vertical-align: top;
+        width: 65%;
+    }
+    article
+    {
+        background: #011E30;
+        border-radius: 0.5em;
+        min-height: 140px;
+        padding: 0.25em;
+    }
+    aside
+    {
+        width: 30%;
+    }
