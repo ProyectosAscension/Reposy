@@ -99,37 +99,37 @@
 				<div class="col-md-4 text-center item-block">
 					<span class="icon"><img src="images/AsuncionP1.png"  class="img-responsive"></span>
 					<h3>Asunción</h3>
-					<p>Ingredientes:</p>
+					<p>Ingredientes: Chorizo, Champiñones, Cebolla Morada, Jamon</p>
 					<p><a class="btn btn-primary btn-outline with-arrow" id="pedido1">Agregar a su pedido<i class="icon-arrow-right"></i></a></p>
 				</div>
 				<div class="col-md-4 text-center item-block">
 					<span class="icon"><img src="images/hawainaP1.png" class="img-responsive"></span>
 					<h3>Hawaiana</h3>
-					<p>Ingredientes:</p>
+					<p>Ingredientes: Jamon, Piña</p>
 					<p><a class="btn btn-primary btn-outline with-arrow" id="pedido2">Agregar a su pedido<i class="icon-arrow-right"></i></a></p>
 				</div>
 				<div class="col-md-4 text-center item-block">
 					<span class="icon"><img src="images/mexicanaP1.png"  class="img-responsive"></span>
 					<h3>Mexicana</h3>
-					<p>Ingredientes:</p>
+					<p>Ingredientes: Jamon, Chorizo, Jalapeño,Jitomate, Cebolla</p>
 					<p><a class="btn btn-primary btn-outline with-arrow" id="pedido3">Agregar a su pedido<i class="icon-arrow-right"></i></a></p>
 				</div>
 				<div class="col-md-4 text-center item-block">
 					<span class="icon"><img src="images/italianaP1.png"  class="img-responsive"></span>
 					<h3>Italiana</h3>
-					<p>Ingredientes:</p>
+					<p>Ingredientes: Pepperoni, Champiñones,Jamon,Pimiento,Cebolla Morada, Queso</p>
 					<p><a class="btn btn-primary btn-outline with-arrow" id="pedido4">Agregar a su pedido<i class="icon-arrow-right"></i></a></p>
 				</div>
 				<div class="col-md-4 text-center item-block">
 					<span class="icon"><img src="images/aztecaP1.png"  class="img-responsive"></span>
 					<h3>Azteca</h3>
-					<p>Ingredientes:</p>
+					<p>Ingredientes: Carne Molida, Jamon, Champiñones,Pimiento,Cebolla, Jitomate, Jalapeño</p>
 					<p><a  class="btn btn-primary btn-outline with-arrow" id="pedido5">Agregar a su pedido<i class="icon-arrow-right"></i></a></p>
 				</div>
 				<div class="col-md-4 text-center item-block">
 					<span class="icon"><img src="images/PepperoniP1.png"  class="img-responsive"></span>
 					<h3>Pepperoni</h3>
-					<p>Ingredientes:</p>
+					<p>Ingredientes: Pepperoni, Queso</p>
 					<p><a class="btn btn-primary btn-outline with-arrow" id="pedido6">Agregar a su pedido<i class="icon-arrow-right"></i></a></p>
 				</div>
 			</div>
@@ -175,7 +175,7 @@
 	<script src="js/main.js"></script>
 	
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-	<script src="js/sweetAlert.js"></script>
+	<script src="js/pruebamensaje2.js"></script>
 	</body>
 
 </html>
