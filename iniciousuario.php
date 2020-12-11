@@ -105,7 +105,7 @@
 				<div class="col-md-4 text-center item-block">
 					<span class="icon"><img src="images/hawainaP1.png" class="img-responsive"></span>
 					<h3>Hawaiana</h3>
-					<p>Ingredientes: Jamon, Piña</p>
+					<p>Ingredientes: Jamon, Piña, Salsa de jitomate</p>
 					<p><a class="btn btn-primary btn-outline with-arrow" id="pedido2">Agregar a su pedido<i class="icon-arrow-right"></i></a></p>
 				</div>
 				<div class="col-md-4 text-center item-block">
@@ -129,7 +129,7 @@
 				<div class="col-md-4 text-center item-block">
 					<span class="icon"><img src="images/PepperoniP1.png"  class="img-responsive"></span>
 					<h3>Pepperoni</h3>
-					<p>Ingredientes: Pepperoni, Queso</p>
+					<p>Ingredientes: Pepperoni, Queso, Salsa de jitomate</p>
 					<p><a class="btn btn-primary btn-outline with-arrow" id="pedido6">Agregar a su pedido<i class="icon-arrow-right"></i></a></p>
 				</div>
 			</div>
