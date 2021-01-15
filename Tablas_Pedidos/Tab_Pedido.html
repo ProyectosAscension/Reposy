@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head >
+    <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css.css">
+   <title>Tabla Pedidos Admin</title>
+</head>
+<body >
+    <div class="container"> 
+        <div class="table-wrapper">
+            <div class="table-titlte">
+                <div class="row">
+                    <h2>DETALLES DE LA ORDEN</h2>
+             </div>
+        </div>
+    </div>
+    <div class="row text-center" id="loader" style="position: absolute; top: 140px; left:50% ">
+    </div>
+            <div class="table-filter">
+                <div class="row">
+                    <div class="col-9-group">
+                        <button type="button" class="btn btn-primary"><i class="fa fa-search" onclick="load(1);"></i>Mostrar</button>
+                            <div class="filter-group">
+                                    <label>Nombre</label>  
+                                    <input type="text" class="form-control" id="name" required>
+                            </div>
+                                <div class="filter-group">
+                                    <label>Ubicacion</label>
+                                       <select class="from-control" id="location" onchange="load(1);">
+                                    <option value="">Todos</option>
+                                    <option value="San Bartolo">San Bartolo"</option>
+                                    <option value="San Miguelito">San Miguelito</option>
+                                    <option value="San Pedro">San Pedro</option>
+                                    <option value="Col.Lindavista">Col.Lindavista</option>
+                                    <option value="Centro">Centro</option>
+                                    <option value="Lobera">Lobera</option> 
+                            </select> 
+                         </div>
+                                               <div class="filter-group">
+                                                    <label>Estado</label>
+                                                        <select class="form-control" id="status" onchange="load(1);" >
+                                                            <option value="">Todos</option> 
+                                                            <option value="Entregado">Entregado</option>
+                                                            <option value="Enviada">Enviada</option>  
+                                                            <option value="Pendiente">Pendiente</option>
+                                                            <option value="Cancelada">Cancelada</option>
+                                                        </select>
+                         </div>
+                         <span class="filter-icon"><i class="fa fa-filter"></i></span>
+                    </div>
+                         <div class="col-sm-3 text-right">
+                             <div class="show-entries">
+                                  
+                            
+                        </div>
+                    </div>
+                </div>  
+            </div>
+        </div>
+        <table  WIDTH="100%"  CELLSPACING="2" CELLPADDING="12" > 
+            <tbody style="background-color:#F4A460;" >
+          <tr>
+              <th ># </th>
+              <th>Cliente</th>
+              <th>Ubicacion</th>
+              <th>Fecha</th>
+              <th>Estado</th>
+              <th>Total</th>
+              </tr>
+                </tbody> 
+              </table>
+          
+        <table class="tab" WIDTH="100%"  CELLSPACING="2" CELLPADDING="12">
+            <tbody style="background-image: url(hand-painted-watercolor-background-with-sky-and-clouds-shape.jpg);" > 
+            <tr>  
+                        <th width="72" > </th>
+                        <th width="220" ></th>
+                        <th width="287"></th>
+                        <th width="192"></th>
+                        <th width="210" height="14"></th>
+                        <th></th>
+                                    </tr> 
+              <tr>  
+                        <th width="72" > </th>
+                        <th width="220" ></th>
+                        <th width="287"></th>
+                        <th width="192"></th>
+                        <th width="210" height="14"></th>
+                        <th></th>
+                                    </tr> 
+                 <tr>  
+                        <th width="72" > </th>
+                        <th width="220" ></th>
+                        <th width="287"></th>
+                        <th width="192"></th>
+                        <th width="210" height="14"></th>
+                        <th></th>
+                                    </tr> 
+                                    <tr>  
+                                        <th width="72" > </th>
+                                        <th width="220" ></th>
+                                        <th width="287"></th>
+                                        <th width="192"></th>
+                                        <th width="210" height="14"></th>
+                                        <th></th>
+                                                    </tr> 
+                              <tr>  
+                                        <th width="72" > </th>
+                                        <th width="220" ></th>
+                                        <th width="287"></th>
+                                        <th width="192"></th>
+                                        <th width="210" height="14"></th>
+                                        <th></th>
+                                                    </tr> 
+                                 <tr>  
+                                        <th width="72" > </th>
+                                        <th width="220" ></th>
+                                        <th width="287"></th>
+                                        <th width="192"></th>
+                                        <th width="210" height="14"></th>
+                                        <th></th>
+                                                    </tr> 
+            </tbody>
+             </table>
+</body>
+</html>
