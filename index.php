@@ -1,4 +1,14 @@
+<?php
+	/*function agregardatos(){
+		require 'assets/registrousuario.php';
+		if(!empty($message_adduser))
+		{
+			//echo '<script src="js/msg-agregado.js"></script>';
 
+		}
+	}*/
+	
+?>
 <!DOCTYPE html>
 <html class="no-js">
 	<head>
