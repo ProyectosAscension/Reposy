@@ -29,6 +29,7 @@
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/flexslider.css">
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/tableorden.css">
 
 	<script src="js/modernizr-2.6.2.min.js"></script>
 	<!--MENSAJE DE ALERTA PEDIDO-->
@@ -47,7 +48,7 @@
 						<li><a href="iniciousuario.php#fh5co-why-us"><img src="images/logopizza1.png">Pizzas y adicionales</a></li>
 						<!--<li><a href="#"><img src="images/logobebida1.png">Adicionales</a></li>-->
 						<li><a href="orden.php"><img src="images/logopedido1.png">Mi Orden</a></li>
-						<li><a href="index.php"><img src="images/logocerrar3.png">Salir</a></li>
+						<li><a href="assets/desconexion.php"><img src="images/logocerrar3.png">Salir</a></li>
 					</ul>
 				</nav>
 			</div>
@@ -96,60 +97,50 @@
 	<!--PEQUEÑOS AVATARES BUENA OPCION-->
 	
 	<div id="fh5co-why-us" class="animate-box">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-6 col-md-offset-3 text-center fh5co-heading">
-					<h2>Seleccione su Pizza de preferencia</h2>
-					<p>Puede escoger su pizza de nuestras diferentes variedades y sabores que ofrecemos</p>
-					<p>Agregue su direccion actual</p>
-					<button class="btn btn-primary btn-outline with-arrow btn-sm" href="">Ingresar direccion del pedido</button>
-				</div>
-				<div class="col-md-4 text-center item-block">
-					<span class="icon"><img src="images/AsuncionP1.png"  class="img-responsive"></span>
-					<h3>Asunción</h3>
-					<p>Ingredientes: Chorizo, Champiñones, Cebolla Morada, Jamon</p>
-					<p><a class="btn btn-primary btn-outline with-arrow" id="pedido1">Agregar a su pedido<i class="icon-arrow-right"></i></a></p>
-				</div>
-				<div class="col-md-4 text-center item-block">
-					<span class="icon"><img src="images/hawainaP1.png" class="img-responsive"></span>
-					<h3>Hawaiana</h3>
-					<p>Ingredientes: Jamon, Piña</p>
-					<p><a class="btn btn-primary btn-outline with-arrow" id="pedido2">Agregar a su pedido<i class="icon-arrow-right"></i></a></p>
-				</div>
-				<div class="col-md-4 text-center item-block">
-					<span class="icon"><img src="images/mexicanaP1.png"  class="img-responsive"></span>
-					<h3>Mexicana</h3>
-					<p>Ingredientes: Jamon, Chorizo, Jalapeño,Jitomate, Cebolla</p>
-					<p><a class="btn btn-primary btn-outline with-arrow" id="pedido3">Agregar a su pedido<i class="icon-arrow-right"></i></a></p>
-				</div>
-				<div class="col-md-4 text-center item-block">
-					<span class="icon"><img src="images/italianaP1.png"  class="img-responsive"></span>
-					<h3>Italiana</h3>
-					<p>Ingredientes: Pepperoni, Champiñones,Jamon,Pimiento,Cebolla Morada, Queso</p>
-					<p><a class="btn btn-primary btn-outline with-arrow" id="pedido4">Agregar a su pedido<i class="icon-arrow-right"></i></a></p>
-				</div>
-				<div class="col-md-4 text-center item-block">
-					<span class="icon"><img src="images/aztecaP1.png"  class="img-responsive"></span>
-					<h3>Azteca</h3>
-					<p>Ingredientes: Carne Molida, Jamon, Champiñones,Pimiento,Cebolla, Jitomate, Jalapeño</p>
-					<p><a  class="btn btn-primary btn-outline with-arrow" id="pedido5">Agregar a su pedido<i class="icon-arrow-right"></i></a></p>
-				</div>
-				<div class="col-md-4 text-center item-block">
-					<span class="icon"><img src="images/PepperoniP1.png"  class="img-responsive"></span>
-					<h3>Pepperoni</h3>
-					<p>Ingredientes: Pepperoni, Queso</p>
-					<p><a class="btn btn-primary btn-outline with-arrow" id="pedido6">Agregar a su pedido<i class="icon-arrow-right"></i></a></p>
-				</div>
-				<div class="col-md-6 col-md-offset-3 text-center fh5co-heading">
-					<h2>Seleccione sus Adicionales</h2>
-					<p>Puede escoger prodcutos adicionales y bebidas</p>
-					<!--<p>Agregue su direccion actual</p>-->
-					
-				</div>
-			</div>
-		</div>
+	<div class="table-title">
+	<h3>Ordenes</h3>
 	</div>
-	
+	<table class="table-fill">
+	<thead>
+		<tr>
+			<th class="text-left">ID Pedido</th>
+			<th class="text-left">Producto</th>
+			<th class="text-left">Categoria</th>
+			<th class="text-left">Cantidad</th>
+			<th class="text-left">Precio</th>
+			<th class="text-left">Tamanio</th>
+			<th class="text-left">Estatus</th>
+			<th class="text-left">Eliminar</th>
+		</tr>
+	</thead>
+	<tbody class="table-hover">
+	<?php
+	$usuario_n=$_SESSION['user'];
+	$cadena="SELECT * FROM pedidos WHERE nombre_usuario='$usuario_n'";
+	$dato=mysqli_query($conn,$cadena);
+
+	while($mostrar=mysqli_fetch_array($dato))
+	{
+		$concatenar=$mostrar['id_pedido'];
+	?>
+		<tr>
+			<td class="text-left"><?php echo $mostrar['id_pedido'] ?></td>
+			<td class="text-left"><?php echo $mostrar['producto'] ?></td>
+			<td class="text-left"><?php echo $mostrar['categoria'] ?></td>
+			<td class="text-left"><?php echo $mostrar['cantidad'] ?></td>
+			<td class="text-left"><?php echo $mostrar['precio'] ?></td>
+			<td class="text-left"><?php echo $mostrar['tamanio'] ?></td>
+			<td class="text-left"><?php echo $mostrar['estatus'] ?></td>
+			<td class="text-left">
+			<a href=<?php echo "assets/borrarorden.php?o=$concatenar" ?>  class="btn btn-primary btn-outline with-arrow btn-sm">Eliminar</a>
+			</td>
+		</tr>
+	<?php
+	}
+		?>
+	</tbody>
+	</table>
+	</div>
 
 
 	<footer id="fh5co-footer" role="contentinfo">
@@ -187,9 +178,10 @@
 	<script src="js/jquery.waypoints.min.js"></script>
 	<script src="js/jquery.flexslider-min.js"></script>
 	<script src="js/main.js"></script>
-	
+	<!--
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-	<script src="js/pruebamensaje2.js"></script>
+	<script src="js/borrarpedido1.js"></script>
+	-->
 	</body>
 
 </html>
