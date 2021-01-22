@@ -97,6 +97,14 @@
 	<!--PEQUEÑOS AVATARES BUENA OPCION-->
 	
 	<div id="fh5co-why-us" class="animate-box">
+	<div class="container">
+			<div class="row">
+                
+				<div class="col-md-6 col-md-offset-3 text-center fh5co-heading">
+				<a href=""  class="btn btn-primary btn-outline with-arrow btn-sm" data-toggle="modal" data-target="#modalpago">Agregue Metodo de Pago</a>
+				</div>
+	</div>
+	</div>
 	<div class="table-title">
 	<h3>Ordenes</h3>
 	</div>
@@ -140,6 +148,7 @@
 		?>
 	</tbody>
 	</table>
+	
 	</div>
 
 
@@ -172,6 +181,61 @@
 		});
 	</script>
 	-->
+	<div class="modal fade" id="modalpago" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Seleccione su banco de su Trajeta</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+	  </div>
+	  <form action="assets/registrotarjeta.php" method="POST">
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+		  <!--<label data-error="wrong" data-success="right" for="defaultForm-email">Correo electronico:</label>-->
+		  <!--<input type="email" id="email-modallogin" name="email-modallogin" class="form-control validate" required>-->
+		  <input type="radio" id="ban1" name="Banamex" value="Banamex">
+		  <label data-error="wrong" data-success="right" for="defaultForm-pass">Banamex  </label>
+
+		</div>
+		<div class="md-form mb-5">
+			<input type="radio" id="ban2" name="Bancomer" value="Bancomer">
+			<label data-error="wrong" data-success="right" for="defaultForm-pass">Bancomer  </label>
+		</div>
+		<div class="md-form mb-5">
+			<input type="radio" id="ban3" name="Santander" value="Santander">
+			<label data-error="wrong" data-success="right" for="defaultForm-pass">Santander</label>
+		</div>
+		<div class="md-form mb-5">
+			<input type="radio" id="ban4" name="HSBC" value="HSBC">
+			<label data-error="wrong" data-success="right" for="defaultForm-pass">HSBC</label>
+		</div>
+		<div class="md-form mb-5">
+			<input type="radio" id="ban4" name="PayPal" value="PayPal">
+			<label data-error="wrong" data-success="right" for="defaultForm-pass">PayPal</label>
+		</div>
+        <div class="md-form mb-4">
+		  <label data-error="wrong" data-success="right" for="defaultForm-pass">Numero de cuenta</label>
+          <input type="number" id="banconum" name="banconum" class="form-control validate" required>
+        </div>
+      </div>
+      <div class="modal-footer d-flex justify-content-center">
+		<button class="btn btn-primary btn-outline with-arrow btn-sm" id="boton-modallogin" >Registrar</button>
+		<p></p>
+		<h6>
+			
+		<label>No proporcione su numero de cuenta a desconocidos</label>
+		<p></p>
+		<label>No use redes publicas al registrar su numero de cuenta</label>
+		<p></p>
+		<label>La verificacion de cuenta puede tardar</label>
+	</h6>
+	  </div>
+	</form>
+    </div>
+  </div>
+</div>
 	<script src="js/jquery.min.js"></script>
 	<script src="js/jquery.easing.1.3.js"></script>
 	<script src="js/bootstrap.min.js"></script>
