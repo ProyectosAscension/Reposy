@@ -1,4 +1,10 @@
-
+<?php
+  session_start();
+  require("assets/conexion.php");
+	if (isset($_SESSION['user'])) {
+		echo "<script>location.href='iniciousuario.php'</script>";
+	  }
+	?>
 <!DOCTYPE html>
 <html class="no-js">
 	<head>
@@ -57,7 +63,7 @@
 				<h1><a href="#"><img src="images/logopizzeria1.png">Pizzeria Asuncion<span></span></a></h1>
 				<nav role="navigation">
 					<ul>
-						<li><a href="" data-toggle="modal" data-target="#modalLoginForm" ><img src="images/logoinicio1.png">Iniciar</a></li>
+						<li><b><a href="" data-toggle="modal" data-target="#modalLoginForm" ><img src="images/logoinicio1.png">Iniciar</a></b></li>
 						<!--<li><a href="services.html"><img src="images/logopizza1.png">Pizzas</a></li>
 						<li><a href="pricing.html"><img src="images/logobebida1.png">Adicionales</a></li>
 						<li><a href="about.html">About</a></li>
@@ -79,7 +85,7 @@
 		   			<div class="col-md-10 col-md-offset-1 text-center js-fullheight slider-text">
 		   				<div class="slider-text-inner">
 		   					<h2>"Las mejores Pizza a su paladar"</h2>
-		   					<p><a href="#" class="btn btn-primary btn-lg"  data-toggle="modal" data-target="#modalLoginForm">Ordene ya</a></p>
+		   					<p><a href="#" class="btn btn-primary btn-lg"  data-toggle="modal" data-target="#modalLoginForm">Ingrese Aqui</a></p>
 		   				</div>
 		   			</div>
 		   		</div>
@@ -89,7 +95,7 @@
 		   			<div class="col-md-10 col-md-offset-1 text-center js-fullheight slider-text">
 		   				<div class="slider-text-inner">
 		   					<h2>"Pizzas con ingredientes naturales"</h2>
-		   					<p><a href="#" class="btn btn-primary btn-lg"  data-toggle="modal" data-target="#modalLoginForm">Ordene ya</a></p>
+		   					<p><a href="#" class="btn btn-primary btn-lg"  data-toggle="modal" data-target="#modalLoginForm">Ingrese Aqui</a></p>
 		   				</div>
 		   			</div>
 		   		</div>
@@ -99,7 +105,7 @@
 		   			<div class="col-md-10 col-md-offset-1 text-center js-fullheight slider-text">
 		   				<div class="slider-text-inner">
 		   					<h2>"Pruebe nuestras mejores pizzas"</h2>
-		   					<p><a href="" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modalLoginForm">Ordene ya</a></p>
+		   					<p><a href="" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modalLoginForm">Ingrese Aqui</a></p>
 		   				</div>
 		   			</div>
 		   		</div>
@@ -246,61 +252,28 @@
 	</div>
 	-->
 	<!--TIRA DE IMAGENES NO ANIMADAS-->
-	<!--
+	
 	<div id="fh5co-blog" class="animate-box">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6 col-md-offset-3 text-center fh5co-heading">
-					<h2>Latest <em>from</em> Blog</h2>
-					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
+					<h2>Prueba nuestra funcionalidad de <em>Realidad Aumentada</em></h2>
+					<p>Pruebe apuntar la camara de sus dispositivo movil al logo de nuestra Pizzeria</p>
+					<span class="icon"><img src="pizzerialogo1.png" alt="Free HTML5 Templates" class="img-responsive"></span>
 				</div>
 			</div>
 		</div>
 		<div class="container">
 			<div class="row">
-				<div class="col-md-4">
-					<a class="fh5co-entry" href="#">
-						<figure>
-						<img src="images/image_1.jpg" alt="Free Website Template, Free HTML5 Bootstrap Template" class="img-responsive">
-						</figure>
-						<div class="fh5co-copy">
-							<h3>We Create Awesome Free Templates</h3>
-							<span class="fh5co-date">June 8, 2016</span>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4">
-					<a class="fh5co-entry" href="#">
-						<figure>
-						<img src="images/image_2.jpg" alt="Free Website Template, Free HTML5 Bootstrap Template" class="img-responsive">
-						</figure>
-						<div class="fh5co-copy">
-							<h3>Handcrafted Using CSS3 &amp; HTML5</h3>
-							<span class="fh5co-date">June 8, 2016</span>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4">
-					<a class="fh5co-entry" href="#">
-						<figure>
-						<img src="images/image_3.jpg" alt="Free Website Template, Free HTML5 Bootstrap Template" class="img-responsive">
-						</figure>
-						<div class="fh5co-copy">
-							<h3>We Try To Update The Site Everyday</h3>
-							<span class="fh5co-date">June 8, 2016</span>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
-						</div>
-					</a>
-				</div>
+			
 				<div class="col-md-12 text-center">
-					<p><a href="#" class="btn btn-primary btn-outline with-arrow">View More Posts <i class="icon-arrow-right"></i></a></p>
+					<p><a href="ar.php" class="btn btn-primary btn-outline with-arrow">Sorpresa AR <i class="icon-arrow-right"></i></a></p>
 				</div>
 			</div>
-		</div>	
+		</div>
+			
 	</div>
-	-->
+	
 <!--BOTON DE AYUDA-->
 <!--
 	<div class="fh5co-cta" style="background-image: url(images/image_3.jpg);">
@@ -320,7 +293,9 @@
 			<div class="col-md-3 col-sm-12 col-sm-push-0 col-xs-12 col-xs-push-0">
 				<h3>Desarrollado</h3>
 				<p>Equipo de desarrollo Dinamyte</p>
+	  			<!--
 				<p><a href="#" class="btn btn-primary btn-outline with-arrow btn-sm">Ingresar <i class="icon-arrow-right"></i></a></p>
+	  			-->
 			</div>
 			<!--
 			<div class="col-md-6 col-md-push-1 col-sm-12 col-sm-push-0 col-xs-12 col-xs-push-0">
@@ -436,7 +411,7 @@
 				<td  colspan=2>
 		  <!---->
 						<label data-error="wrong" data-success="right" for="orangeForm-name">Telefono: </label>
-						<input type="number" id="telefonoModal" name="telefonoModal" class="form-control validate" required>
+						<input type="number" id="telefonoModal" name="telefonoModal" min="1" pattern="^[0-9]+" class="form-control validate" required>
 				</td>
 			</tr>
 			<tr>
@@ -470,7 +445,7 @@
 				</td>
 				<td>
 			 			<label data-error="wrong" data-success="right" for="orangeForm-name">Codigo Postal</label>
-			  			<input type="text" id="cpModal" name="cpModal" class="form-control validate" required>
+			  			<input type="text" id="cpModal" name="cpModal" min="1" pattern="^[0-9]+" class="form-control validate" required>
 		  		</td>
 			</tr>
 			<tr>
@@ -486,7 +461,7 @@
 			<tr>
 				<td>
 				<label data-error="wrong" data-success="right" for="orangeForm-name">Numero de casa</label>
-				  		<input type="number" id="numeroModal" name="numeroModal" class="form-control validate" required>
+				  		<input type="number" id="numeroModal" name="numeroModal" min="1" pattern="^[0-9]+" class="form-control validate" required>
 				</td>
 			</tr>
 		  <!---->
